@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+@import NMAKit;
 
 @interface AppDelegate ()
 
@@ -16,7 +17,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    #define kHelloMapAppID @"uukcciLxS5ChZ8vLzI7w"
+    #define kHelloMapAppCode @"XFOcHqPTKP9_H2ppjzm_XQ"
+    
+    
+    [NMAApplicationContext setAppId:kHelloMapAppID appCode:kHelloMapAppCode];
     return YES;
 }
 
