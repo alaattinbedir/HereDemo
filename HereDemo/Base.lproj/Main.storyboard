@@ -47,6 +47,12 @@
                                             <action selector="getCurrentLocation:" destination="BYZ-38-t0r" id="DwP-Es-HGq"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gDW-Kk-F95"/>
+                                    <barButtonItem title="Rota Olustur" id="hkP-bM-5I1">
+                                        <connections>
+                                            <action selector="createRoute:" destination="BYZ-38-t0r" id="EuR-uL-iXk"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
