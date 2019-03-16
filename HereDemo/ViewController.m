@@ -96,6 +96,57 @@
     [self positionDidUpdate];
 }
 
+//- (void)createRoute
+//{
+//    // Create an NSMutableArray to add two stops
+//    NSMutableArray* stops = [[NSMutableArray alloc] initWithCapacity:4];
+//    
+//    // START: 4350 Still Creek Dr
+//    NMAGeoCoordinates* hereBurnaby =
+//    [[NMAGeoCoordinates alloc] initWithLatitude:40.93567 longitude:29.15507];
+//    // END: Langley BC
+//    NMAGeoCoordinates* langley =
+//    [[NMAGeoCoordinates alloc] initWithLatitude:49.0736 longitude:-122.559549];
+//    [stops addObject:hereBurnaby];
+//    [stops addObject:langley];
+//    
+//    // Create an NMARoutingMode, then set it to find the fastest car route without going on Highway.
+//    NMARoutingMode* routingMode =
+//    [[NMARoutingMode alloc] initWithRoutingType:NMARoutingTypeFastest
+//                                  transportMode:NMATransportModeCar
+//                                 routingOptions:NMARoutingOptionAvoidHighway];
+//    
+//    // Initialize the NMACoreRouter
+//    if ( !self.router )
+//    {
+//        self.router = [[NMACoreRouter alloc] init];
+//    }
+//    
+//    // Trigger the route calculation
+//    [self.router calculateRouteWithStops:stops routingMode:routingMode
+//                         completionBlock:^(NMARouteResult *routeResult, NMARoutingError error) {
+//                             
+//                             // If the route was calculated successfully
+//                             if (!error && routeResult && routeResult.routes.count > 0)
+//                             {
+//                                 NMARoute* route = [routeResult.routes objectAtIndex:0];
+//                                 // Render the route on the map
+//                                 NMAMapRoute* mapRoute = [NMAMapRoute mapRouteWithRoute:route];
+//                                 [mapView addMapObject:mapRoute];
+//                                 
+//                                 // To see the entire route, we orientate the map view accordingly
+//                                 [mapView setBoundingBox:route.boundingBox
+//                                           withAnimation:NMAMapAnimationLinear];
+//                             }
+//                             else if (error)
+//                             {
+//                                 // Display a message indicating route calculation failure
+//                             }
+//                         }];
+//    
+//}
+
+
 - (IBAction)createRoute:(id)sender {
     
     NMAGeoCoordinates *geoCoordCenter = [[NMAGeoCoordinates alloc] initWithLatitude:41.000144 longitude:29.099402];
